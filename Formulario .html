@@ -1,0 +1,69 @@
+<html>
+
+	<head>
+          <title> Formação  </title>
+	<link href="Teste.css" type="text/css" rel="stylesheet">
+	</head>
+
+
+	<body>
+	
+        <h1> Contacte-nos!</h1>
+
+        <form>
+            <fieldset><legend>Identificação do utilizador</legend>
+                <p>Nome: <input type="text" name="nnome" id="inome" size="80" maxlenght="90" placeholder="Nome Completo"></p>
+                <p>Password: <input type="password" name="npassword" id="ipassword" size="10" maxlenght="10" placeholder="max 10 dígitos"></p>
+                <p>Email: <input type="email" name="nmail" id="iemail" size="60" maxlenght="100" placeholder="Email"></p>
+                
+                <p><fieldset><legend id="genero">Género:</legend></p>
+                <p><input type="radio" name="ngenero" id="iMasc"> <label for="iMasc">Masculino</label></p>
+                <p><input type="radio" name="ngenero" id="iFem">Feminino</p>
+            </fieldset>
+
+            <p>Em que ano nasceu?<input type="number" name="idade" id="idade"></p>
+            <input type="button" value="Verificar" onclick="infor()">
+            <div id=infor></div>
+                <script>
+                    function infor(){
+                    var ano = Number(window.document.getElementById('idade').value)
+                    var r = window.document.getElementById('infor')
+        
+                    var data = new Date();
+                    var anoatual = data.getFullYear();
+                    var idade = anoatual - ano
+        
+                    r.innerText =`Então você tem/ou vai fazer ${idade} anos.`
+                }
+            </script>
+    
+
+
+    </fieldset>
+    
+            <fieldset><legend>Morada do Utilizador</legend>
+                <p>Rua: <input type="text" name="trua" id="crua" size="60" maxlenght="80" placeholder="Nome da Rua"></p>
+                <p>Número: <input type="number" name="tcp" id="ccp" min="0" max="99999" placeholder="Número de Telemóvel"></p>
+                <p>Código Postal: <input type="number" name="tcp" id="ccp" min="0" max="99999"> - <input type="number" name="tcp" id="ccp" min="0" max="99999"></p>
+                <p>Localidade: <input type="text" name="tlocal" id="clocal" size="60" maxlenght="80" placeholder="Localidade" list="localidades"></p>
+            <datalist id="localidades">
+                <option value="Matosinhos"></option>
+                <option value="Maia"></option>
+                <option value="Santo Tirso"></option>
+                <option value="Trofa"></option>
+            </datalist>
+    </fieldset>    
+                
+                <fieldset><legend>Observações:</legend>
+    <br>
+                <b>Mensagem: <textarea name="nmens" id="imens" cols="45" rows="5" placeholder="Escreva aqui a sua mensagem."></textarea></p></b>
+    </fieldset>
+    
+            <input type="submit" value="Enviar">
+    
+    </form> 
+            <br>
+            
+            <b><center><a href="Index .html">1ª página</a></b></center>	 
+
+</html>
